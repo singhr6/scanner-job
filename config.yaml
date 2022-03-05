@@ -1,0 +1,31 @@
+env: prod
+retention: 10
+email_subject: 'prod - scanner job result'
+email-from: scanner@zimmerbiomet.com
+email-to: ranjeetkumar.singh@zimmerbiomet.com
+
+ems-file-limit: 10
+ems-files:
+  - \\tibco-ems-vp01\E$\TIBCO\EMS-Logs\ems-7222-jndi\logfile
+  - \\tibco-ems-vp01\E$\TIBCO\EMS-Logs\ems-17222\logfile
+  - \\tibco-ems-vp01\E$\TIBCO\EMS-Logs\ems-17422-cle\logfile
+  - \\tibco-ems-vp01\E$\TIBCO\EMS-Logs\ems-27222\logfile
+  - \\tibco-ems-vp02\E$\TIBCO\EMS-Logs\ems-7222-jndi\logfile
+  - \\tibco-ems-vp02\E$\TIBCO\EMS-Logs\ems-17222\logfile
+  - \\tibco-ems-vp02\E$\TIBCO\EMS-Logs\ems-17422-cle\logfile
+  - \\tibco-ems-vp02\E$\TIBCO\EMS-Logs\ems-27222\logfile
+  - \\tibco-ems-vp03\E$\TIBCO\EMS-Logs\ems-7222-jndi\logfile
+  - \\tibco-ems-vp03\E$\TIBCO\EMS-Logs\ems-17422-cle\logfile
+  - \\tibco-ems-vp03\E$\TIBCO\EMS-Logs\ems-37222\logfile
+  - \\tibco-ems-vp03\E$\TIBCO\EMS-Logs\ems-47222\logfile
+  - \\tibco-ems-vp04\E$\TIBCO\EMS-Logs\ems-7222-jndi\logfile
+  - \\tibco-ems-vp04\E$\TIBCO\EMS-Logs\ems-17422-cle\logfile
+  - \\tibco-ems-vp04\E$\TIBCO\EMS-Logs\ems-37222\logfile
+  - \\tibco-ems-vp04\E$\TIBCO\EMS-Logs\ems-47222\logfile
+  - \\tibco-ems-vp05\E$\TIBCO\EMS-Logs\ems-7222-jndi\logfile
+  - \\tibco-ems-vp05\E$\TIBCO\EMS-Logs\ems-17422-cle\logfile
+  - \\tibco-ems-vp05\E$\TIBCO\EMS-Logs\ems-57222\logfile
+
+jobs:
+  - mft-cleanup
+  - edi-cleanup
